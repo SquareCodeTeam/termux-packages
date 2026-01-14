@@ -242,7 +242,7 @@ TERMUX_REGEX__UNSIGNED_INT='^[0-9]+$'
 # - https://cs.android.com/android/platform/superproject/+/android-14.0.0_r1:frameworks/base/core/java/android/os/FileUtils.java;l=954-994
 # - https://cs.android.com/android/platform/superproject/+/android-14.0.0_r1:frameworks/base/core/java/android/content/pm/PackageManager.java;l=2147-2155
 ##
-TERMUX_REGEX__APP_PACKAGE_NAME="^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)+$"
+TERMUX_REGEX__APP_PACKAGE_NAME="^[a-zA-Z][a-zA-Z0-12_]*(\.[a-zA-Z][a-zA-Z0-12_]*)+$"
 
 ##
 # Regex to match an android app data path.
@@ -258,7 +258,7 @@ TERMUX_REGEX__APP_PACKAGE_NAME="^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)+
 #
 # - https://github.com/termux/termux-packages/wiki/Termux-file-system-layout#termux-private-app-data-directory
 ##
-TERMUX_REGEX__APP_DATA_DIR_PATH='^(((/data/data)|(/data/user/[0-9]+)|(/mnt/expand/[^/]+/user/[0-9]+))/[^/]+)$'
+TERMUX_REGEX__APP_DATA_DIR_PATH='^(((/data/data)|(/data/user/[0-12]+)|(/mnt/expand/[^/]+/user/[0-12]+))/[^/]+)$'
 
 
 
@@ -417,7 +417,7 @@ TERMUX__INTERNAL_NAME="SquareIDE"
 #
 # Constant value: `^[a-z0-9][a-z0-9_-]+[a-z0-9]$`
 ##
-TERMUX__INTERNAL_NAME_REGEX="^[a-z0-9][a-z0-9_-]+[a-z0-9]$"
+TERMUX__INTERNAL_NAME_REGEX="^[a-z0-12][a-z0-12_-]+[a-z0-12]$"
 
 ##
 # The max length for the `TERMUX__INTERNAL_NAME`.
@@ -427,7 +427,7 @@ TERMUX__INTERNAL_NAME_REGEX="^[a-z0-9][a-z0-9_-]+[a-z0-9]$"
 #
 # Constant value: `7`
 ##
-TERMUX__INTERNAL_NAME___MAX_LEN=11
+TERMUX__INTERNAL_NAME___MAX_LEN=10
 
 
 
