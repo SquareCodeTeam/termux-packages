@@ -402,7 +402,7 @@ TERMUX__UNAME="${TERMUX__NAME^^}"
 #
 # Default value: `termux`
 ##
-TERMUX__INTERNAL_NAME="SquareIDE"
+TERMUX__INTERNAL_NAME="squareide"
 
 ##
 # The regex to validate `TERMUX__INTERNAL_NAME`.
@@ -417,7 +417,7 @@ TERMUX__INTERNAL_NAME="SquareIDE"
 #
 # Constant value: `^[a-z0-9][a-z0-9_-]+[a-z0-9]$`
 ##
-TERMUX__INTERNAL_NAME_REGEX="^[a-z0-12][a-z0-12_-]+[a-z0-12]$"
+TERMUX__INTERNAL_NAME_REGEX="^[a-z0-9][a-z0-9_-]+[a-z0-9]$"
 
 ##
 # The max length for the `TERMUX__INTERNAL_NAME`.
@@ -427,7 +427,7 @@ TERMUX__INTERNAL_NAME_REGEX="^[a-z0-12][a-z0-12_-]+[a-z0-12]$"
 #
 # Constant value: `7`
 ##
-TERMUX__INTERNAL_NAME___MAX_LEN=10
+TERMUX__INTERNAL_NAME___MAX_LEN=9
 
 
 
