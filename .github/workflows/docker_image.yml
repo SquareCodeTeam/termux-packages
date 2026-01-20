@@ -29,7 +29,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    if: github.repository == 'termux/termux-packages'
+    if: github.repository == 'SquareCodeTeam/termux-packages'
     steps:
     - name: Clone repository
       uses: actions/checkout@v6
@@ -42,20 +42,20 @@ jobs:
         docker build --tag termux/package-builder-cgct:latest --file scripts/Dockerfile.cgct scripts/
         docker tag termux/package-builder-cgct:latest ghcr.io/termux/package-builder-cgct:latest
     - name: Login to GHCR
-      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'termux/termux-packages'
+      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'SquareCodeTeam/termux-packages'
       uses: docker/login-action@v3
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Login to Docker Hub
-      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'termux/termux-packages'
+      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'SquareCodeTeam/termux-packages'
       uses: docker/login-action@v3
       with:
         username: grimler
         password: ${{ secrets.DOCKER_TOKEN }}
     - name: Push
-      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'termux/termux-packages'
+      if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'SquareCodeTeam/termux-packages'
       run: |
         # ghcr.io seem to be unstable sometimes. It may suddenly drop connection
         # during docker push when some layers are already uploaded. The workaround
